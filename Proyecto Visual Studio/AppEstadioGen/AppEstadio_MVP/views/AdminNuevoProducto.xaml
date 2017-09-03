@@ -1,0 +1,40 @@
+﻿<Page x:Class="AppEstadioGen_MVP.views.AdminNuevoProducto"
+	  xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	  xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	  xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+	  xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+	  mc:Ignorable="d"
+	  d:DesignHeight="460" d:DesignWidth="1000"
+	Title="Nuevo Producto" >
+
+	<Grid>
+		<Label Content="Nuevo Producto" FontFamily="Trebuchet MS" Height="45" HorizontalAlignment="Left" Margin="12,12,0,0" VerticalAlignment="Top" Width="242" FontWeight="Bold" FontSize="30" />
+		
+		<Grid Name="formulario">
+			<Label Content="Descripcion:" FontFamily="Trebuchet MS" Height="24" HorizontalAlignment="Left" Margin="251,112,0,0" VerticalAlignment="Top" Width="79" />
+			<TextBox Height="20" Width="150" Margin="344,112,506,0" Name="textBoxDesc" TextWrapping="Wrap" VerticalAlignment="Top" />
+			<Label Content="Precio:" FontFamily="Trebuchet MS" Height="24" HorizontalAlignment="Left" Margin="280,145,0,0" VerticalAlignment="Top" Width="50" />
+			<TextBox Height="20" Width="150" Margin="344,149,506,0" Name="textBoxPrecio"  VerticalAlignment="Top" />
+			<Label Content="Color:" FontFamily="Trebuchet MS" Height="24" HorizontalAlignment="Left" Margin="280,179,0,0" VerticalAlignment="Top" Width="50" />
+			<TextBox Height="20" Width="150" Margin="344,183,506,0" Name="textBoxColor"  VerticalAlignment="Top" />
+			<Button Content="Crear producto" Height="32" HorizontalAlignment="Left" Margin="251,0,0,49" Click="botonCrear" VerticalAlignment="Bottom" Width="102" />
+			<Label Content="Indique un precio. Ej: 10.95" FontFamily="Trebuchet MS" Height="28" HorizontalAlignment="Right" Margin="0,145,274,0" Name="label1" VerticalAlignment="Top" Width="214" />
+			<Label Content="" FontFamily="Trebuchet MS" Height="29" HorizontalAlignment="Right" Margin="0,382,406,0" Name="resultadoCrear" VerticalAlignment="Top" Width="223" />
+			<Label Content="Le recomendamos que introduzca una descripción" FontFamily="Trebuchet MS" Height="31" HorizontalAlignment="Right" Margin="0,110,168,0" Name="label3" VerticalAlignment="Top" Width="320" />
+			<Label Content="Opcional. Indique el color o colores del producto" FontFamily="Trebuchet MS" Height="29" HorizontalAlignment="Right" Margin="0,179,181,0" Name="label4" VerticalAlignment="Top" Width="307" />
+			<Label Content="Nombre:" FontFamily="Trebuchet MS" Height="24" HorizontalAlignment="Left" Margin="271,78,0,0" VerticalAlignment="Top" Width="59" />
+			<TextBox Height="20" Margin="0,78,506,0" Name="textBoxNombre" TextWrapping="Wrap" VerticalAlignment="Top" Width="150" HorizontalAlignment="Right" />
+			<Label Content="Indique un nombre corto pero descriptivo" FontFamily="Trebuchet MS" Height="29" HorizontalAlignment="Right" Margin="0,0,231,358" Name="label5" VerticalAlignment="Bottom" Width="257" />
+			<Label Content="Tipo:" FontFamily="Trebuchet MS" Height="24" HorizontalAlignment="Left" Margin="280,235,0,0" VerticalAlignment="Top" Width="51" />
+			<Label Content="Seleccione el tipo correcto para este producto" FontFamily="Trebuchet MS" Height="29" HorizontalAlignment="Right" Margin="0,0,198,192" Name="label9" VerticalAlignment="Bottom" Width="290" />
+			<Label Content="Foto:" FontFamily="Trebuchet MS" Height="24" HorizontalAlignment="Left" Margin="288,332,0,0" VerticalAlignment="Top" Width="42" />
+			<TextBox Height="20" Margin="344,0,506,104" Name="textBoxFoto" VerticalAlignment="Bottom" Width="150" />
+			<Label Content="Puede incluir la URL a una imagen" FontFamily="Trebuchet MS" Height="28" HorizontalAlignment="Right" Margin="0,334,199,0" Name="label2" VerticalAlignment="Top" Width="289" />
+			<Label Content="Stock:" FontFamily="Trebuchet MS" Height="24" HorizontalAlignment="Left" Margin="280,302,0,0" VerticalAlignment="Top" Width="50" />
+			<TextBox Height="20" HorizontalAlignment="Right" Margin="0,302,506,0" Name="textBoxStock" TextWrapping="Wrap" VerticalAlignment="Top" Width="150" />
+			<Label Content="Indique la cantidad de artículos en stock" FontFamily="Trebuchet MS" Height="29" HorizontalAlignment="Right" Margin="0,0,232,131" Name="label7" VerticalAlignment="Bottom" Width="257" />
+			<Label Name="espera" Visibility="Hidden" Content="Procesando. Espere..." FontFamily="Trebuchet MS" Height="45" HorizontalAlignment="Left" Margin="647,379,0,0" VerticalAlignment="Top" Width="329" FontWeight="Bold" FontSize="30" />
+			<ComboBox Name="comboTipo" Width="90" Height="24" Margin="344,235,566,201" />
+		</Grid>
+	</Grid>
+</Page>

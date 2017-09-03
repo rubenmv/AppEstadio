@@ -1,0 +1,46 @@
+﻿<Page x:Class="AppEstadioGen_MVP.views.AdminProductos"
+	  xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	  xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	  xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+	  xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+	  mc:Ignorable="d"
+	  d:DesignHeight="464" d:DesignWidth="1000"
+
+
+	Title="Administrador Productos">
+
+	<Grid>
+		<Label Content="Puedes seleccionar varios con ctrl+clic" FontFamily="Trebuchet MS" FontSize="14" Height="34" HorizontalAlignment="Left" Margin="25,91,0,0" VerticalAlignment="Top" Width="277" />
+		<Button Content="Eliminar seleccionados" Height="29" HorizontalAlignment="Right" Margin="0,0,248,39" VerticalAlignment="Bottom" Width="145" Click="BotonEliminarSeleccion" />
+        <Button Content="Añadir uno nuevo" Height="29" HorizontalAlignment="Left" Margin="789,0,0,39" VerticalAlignment="Bottom" Width="115" Click="botonAgregarNuevo" />
+        <Label Content="Edición de productos" FontSize="36" Height="61" HorizontalAlignment="Left" Margin="10,10,0,0" Name="label1" VerticalAlignment="Top" Width="439" />
+		<TextBox HorizontalAlignment="Left" Margin="25,151,0,0" Name="search_box" Text="Búsqueda" TextWrapping="Wrap" VerticalAlignment="Top" Width="213" Height="22" />
+		<Button Content="Buscar" Height="29" HorizontalAlignment="Right" Margin="0,0,873,248" VerticalAlignment="Bottom" Width="102" Click="busqueda" />
+		<Grid Margin="314,91,96,74">
+			<Grid.RowDefinitions>
+				<RowDefinition Height="0*" />
+				<RowDefinition Height="227*" />
+			</Grid.RowDefinitions>
+			<DataGrid AutoGenerateColumns="False" Background="#72BFD859" FontSize="14" HorizontalAlignment="Left" HorizontalContentAlignment="Center" IsReadOnly="True" ItemsSource="{Binding}" Margin="6,6,0,0" Name="dataGridProductos" RowHeight="72" VerticalAlignment="Top" Width="578" Grid.Row="1">
+				<DataGrid.Columns>
+					<DataGridTextColumn Binding="{Binding Id}" Header="Id" Width="50" />
+					<DataGridTemplateColumn Header="Foto" IsReadOnly="True">
+						<DataGridTemplateColumn.CellTemplate>
+							<DataTemplate>
+								<Image Source="{Binding Foto}" />
+							</DataTemplate>
+						</DataGridTemplateColumn.CellTemplate>
+					</DataGridTemplateColumn>
+					<DataGridTextColumn Binding="{Binding Nombre}" Header="Nombre" Width="280" />
+					<DataGridTextColumn Binding="{Binding Precio}" Header="Precio" />
+					<DataGridTextColumn Binding="{Binding Stock}" Header="Stock" />
+				</DataGrid.Columns>
+				<DataGrid.RowStyle>
+					<Style TargetType="{x:Type DataGridRow}">
+						<!--<EventSetter Event="UIElement.MouseUp" Handler="abrirDetalleProducto" />-->
+					</Style>
+				</DataGrid.RowStyle>
+			</DataGrid>
+		</Grid>
+	</Grid>
+</Page>

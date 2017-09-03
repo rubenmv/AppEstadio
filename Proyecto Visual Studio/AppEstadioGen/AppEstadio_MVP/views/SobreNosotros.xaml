@@ -1,0 +1,16 @@
+﻿<Page x:Class="PetstoreGen_PageController.views.SobreNosotros"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      mc:Ignorable="d"
+	  d:DesignHeight="460" d:DesignWidth="1000"
+	Title="Sobre Nosotros">
+
+    <Grid>
+		<Label Content="¿Quienes somos?" FontFamily="Trebuchet MS" Height="45" HorizontalAlignment="Left" Margin="377,12,0,0" VerticalAlignment="Top" Width="245" FontWeight="Bold" FontSize="30" />
+		<TextBlock Text="Rubén Martínez Vilar&#10;Pablo Marzal&#10;Javier Martínez Ruiz" TextAlignment="Center" LineHeight="40" FontFamily="Trebuchet MS" FontSize="24" HorizontalAlignment="Left" Margin="352,63,0,252" Width="295" />
+		<Label Content="Contacto" FontFamily="Trebuchet MS" Height="45" HorizontalAlignment="Left" Margin="428,214,0,0" VerticalAlignment="Top" Width="135" FontWeight="Bold" FontSize="30" />
+		<TextBlock Text="rub3nmv@gmail.com&#10;oleojake@gmail.com&#10;javiermrcom@gmail.com" TextAlignment="Center" LineHeight="40" FontFamily="Trebuchet MS" FontSize="24" HorizontalAlignment="Left" Margin="352,265,0,50" Width="295" />
+	</Grid>
+</Page>

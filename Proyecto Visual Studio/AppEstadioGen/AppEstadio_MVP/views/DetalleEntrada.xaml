@@ -1,0 +1,55 @@
+﻿<Page x:Class="AppEstadioGen_MVP.views.DetalleEntrada"
+	  xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	  xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	  xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+	  xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+      mc:Ignorable="d"
+	  d:DesignHeight="464" d:DesignWidth="1000"
+    Title="DetalleEntrada" Name="NameEntrada">
+
+    <Grid>
+        <Border BorderBrush="Black" BorderThickness="1" CornerRadius="15" Margin="31,121,666,84">
+            <Image Source="{Binding Foto}" />
+        </Border>
+
+        <Label FontFamily="Trebuchet MS" Content="Descripción:" HorizontalAlignment="Left" Margin="372,121,0,0" Width="90" Height="24" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left"
+		   Margin="372,151,0,0"
+		   TextWrapping="Wrap"
+		   Text="{Binding Descripcion}"
+		   VerticalAlignment="Top"
+		   FontFamily="Trebuchet MS"
+		   Width="552"
+		   Height="49" />
+
+		<Label FontFamily="Trebuchet MS" Content="Temporada: " HorizontalAlignment="Left" Margin="372,246,0,0" Width="90" Height="24" VerticalAlignment="Top"/>
+		<Label Content="{Binding Temporada}" FontFamily="Trebuchet MS" Height="24" HorizontalAlignment="Left" Margin="454,246,0,0" VerticalAlignment="Top" Width="137" />
+		<Label FontFamily="Trebuchet MS" Content="Grada: " HorizontalAlignment="Left" Margin="372,278,0,0" Width="90" Height="24" VerticalAlignment="Top"/>
+		<Label Content="{Binding Grada}" FontFamily="Trebuchet MS" Height="24" HorizontalAlignment="Left" Margin="454,278,0,0" VerticalAlignment="Top" Width="137" />
+        <Label FontFamily="Trebuchet MS" Content="Unidades: " HorizontalAlignment="Left" Margin="372,0,0,132" Width="65" Height="24" VerticalAlignment="Bottom"/>
+		<Label Name="labelNumUnidades" Content="1" FontFamily="Trebuchet MS" HorizontalAlignment="Left" Margin="444,308,0,132" Width="26" />
+		<Slider Name="sliderUnidades" HorizontalAlignment="Left"
+			Margin="476,312,0,0"
+			VerticalAlignment="Top"
+			Width="138"
+			Minimum="1"
+			Maximum="10"
+			IsSnapToTickEnabled="True"
+			TickFrequency="1"
+			ValueChanged="Slider_ValueChanged"/>
+		<Label Content="Precio (€): " FontFamily="Trebuchet MS" Height="24" HorizontalAlignment="Left" Margin="707,281,0,0" VerticalAlignment="Top" Width="77" />
+        <TextBlock Name="precioTotal" Margin="781,268,66,0"
+		   TextWrapping="Wrap"
+		   Text="{Binding Precio}"
+		   VerticalAlignment="Top"
+		   FontFamily="Trebuchet MS"
+           FontSize="24"
+		   Padding="10" Height="37" />
+
+        <Button Name="botonCarrito" Content="Agregar a carrito" Height="29" HorizontalAlignment="Right" Margin="0,0,216,63" VerticalAlignment="Bottom" Width="114" Click="agregarEntradaCarro" />
+        <Button Name="botonTienda" Content="Volver a entradas" Height="29" HorizontalAlignment="Left" Margin="822,0,0,63" VerticalAlignment="Bottom" Width="112" Click="irEntradas" />
+        <Label Content="Detalle de entrada" Height="61" HorizontalAlignment="Left" Margin="12,0,0,0" Name="tituloSeccion" VerticalAlignment="Top" Width="439" FontSize="36" Grid.ColumnSpan="2" />
+		<Label Content="Fecha: " FontFamily="Trebuchet MS" Height="24" HorizontalAlignment="Left" Margin="372,216,0,0" VerticalAlignment="Top" Width="90" />
+		<Label Content="{Binding FechaHora}" FontFamily="Trebuchet MS" Height="24" HorizontalAlignment="Left" Margin="454,216,0,0" VerticalAlignment="Top" Width="137" />
+	</Grid>
+</Page>

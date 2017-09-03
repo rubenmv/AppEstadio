@@ -1,0 +1,70 @@
+﻿<Page x:Class="AppEstadioGen_MVP.views.Cabecera"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+      mc:Ignorable="d" Title="Cabecera" Height="190" Width="1000">
+
+	<Grid Width="1000" Height="190">
+		<Grid.RowDefinitions>
+			<RowDefinition Height="2*" />
+			<RowDefinition Height="185*" />
+		</Grid.RowDefinitions>
+		<Image Height="161" HorizontalAlignment="Left" Margin="16,12,0,0" Name="image1" Stretch="Fill" VerticalAlignment="Top" Width="174" Grid.Row="1" Source="/PetstoreGen_PageController;component/images/logo.png" />
+		<Label Content="usuario" Grid.Row="1" Height="35" HorizontalAlignment="Left" Margin="292,29,0,0" Name="usuario" VerticalAlignment="Top" Width="292" FontSize="20" />
+		<Button Content="Salir" Visibility="Hidden" Name="salir" Height="27" HorizontalAlignment="Left" Margin="292,0,0,91" VerticalAlignment="Bottom" Width="105" Grid.Row="1" Click="logout">
+			<Button.Template>
+				<ControlTemplate>
+					<Image Source="/PetstoreGen_PageController;component/images/boton_salir.png"/>
+				</ControlTemplate>
+			</Button.Template>
+		</Button>
+		<Label Content="Tiene 0 productos en el carro" Grid.Row="1" Height="35" HorizontalAlignment="Left" Margin="680,70,0,0" Name="carro" VerticalAlignment="Top" Width="275" FontSize="20" />
+        <Button Content="Inicio" Height="27" HorizontalAlignment="Left" Margin="292,0,0,26" VerticalAlignment="Bottom" Width="94" Grid.Row="1" Click="irInicio">
+            <Button.Template>
+                <ControlTemplate>
+                    <Image Source="/PetstoreGen_PageController;component/images/boton_Inicio.png"/>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
+        <Button Content="Tienda" Grid.Row="1" Height="27" HorizontalAlignment="Right" Margin="0,0,491,25" VerticalAlignment="Bottom" Width="105" Click="irTienda">
+            <Button.Template>
+                <ControlTemplate>
+                    <Image Source="/PetstoreGen_PageController;component/images/boton_tienda.png" />
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
+        <Button Content="Mis Compras" Grid.Row="1" Height="27" HorizontalAlignment="Left" Margin="530,0,0,25" VerticalAlignment="Bottom" Click="irMisCompras" Width="171">
+            <Button.Template>
+                <ControlTemplate>
+                    <Image Source="/PetstoreGen_PageController;component/images/boton_miscompras.png" />
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
+        <Button Name="perfil" Content="Perfil" Grid.Row="1" Height="27" HorizontalAlignment="Left" Margin="850,0,0,26" VerticalAlignment="Bottom" Click = "irPerfil" Width="105">
+            <Button.Template>
+                <ControlTemplate>
+                    <Image Source="/PetstoreGen_PageController;component/images/boton_perfil.png" />
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
+		<Button Content="Carro" Grid.Row="1" Height="27" HorizontalAlignment="Left" Margin="723,0,0,26" VerticalAlignment="Bottom" Click="irCarroCompra" Width="104">
+			<Button.Template>
+				<ControlTemplate>
+					<Image Source="/PetstoreGen_PageController;component/images/boton_carro.png" />
+				</ControlTemplate>
+			</Button.Template>
+		</Button>
+		<Button Name="login" Content="Login" Grid.Row="1" Height="27" HorizontalAlignment="Left" Margin="850,0,0,25" VerticalAlignment="Bottom" Width="105" Click="irLogin">
+			<Button.Template>
+				<ControlTemplate>
+					<Image Source="/PetstoreGen_PageController;component/images/boton_login1.png" />
+				</ControlTemplate>
+			</Button.Template>
+		</Button>
+	</Grid>
+    <!--
+    <Page.Background>
+        <ImageBrush ImageSource="/PetstoreGen_PageController;component/images/fondo_cabecera.png" Stretch="None" TileMode="FlipX" Viewport="0,0,205.307662217732,286.630827122158" ViewportUnits="Absolute" />
+    </Page.Background>-->
+</Page>

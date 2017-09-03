@@ -1,0 +1,96 @@
+0    [main] INFO  eclipse.emf.mwe.core.WorkflowEngine  - --------------------------------------------------------------------------------------
+1    [main] INFO  eclipse.emf.mwe.core.WorkflowEngine  - EMF Modeling Workflow Engine 1.2.1, Build v201306110341
+2    [main] INFO  eclipse.emf.mwe.core.WorkflowEngine  - (c) 2005-2009 openarchitectureware.org and contributors
+2    [main] INFO  eclipse.emf.mwe.core.WorkflowEngine  - --------------------------------------------------------------------------------------
+2    [main] INFO  eclipse.emf.mwe.core.WorkflowEngine  - running workflow: C:/OOH4RIA/Workspace/AppEstadio/templates/workflow/generator.mwe
+2    [main] INFO  eclipse.emf.mwe.core.WorkflowEngine  - 
+435  [main] INFO  lipse.emf.mwe.utils.StandaloneSetup  - Registering platform uri 'C:\OOH4RIA\Workspace'
+534  [main] INFO  lipse.emf.mwe.utils.StandaloneSetup  - Adding generated EPackage 'es.ua.dlsi.ooh.conceptualView.ConceptualViewPackage'
+611  [main] INFO  lipse.emf.mwe.utils.StandaloneSetup  - Adding generated EPackage 'org.eclipse.gmf.runtime.notation.NotationPackage'
+723  [main] INFO  e.core.container.CompositeComponent  - Workflow: executing workflow workflow::nhibernate::generator.mwe in C:/OOH4RIA/Workspace/AppEstadio/templates/workflow/generator.mwe:10
+723  [main] INFO  e.core.container.CompositeComponent  - XmiReader: file 'models/default.domainModel' => slot 'es_ua_dlsi_ooh_conceptual_model'
+936  [main] INFO  e.core.container.CompositeComponent  - CheckComponent: slot es_ua_dlsi_ooh_conceptual_model check file(s): metamodel::Checks 
+1373 [main] INFO  e.core.container.CompositeComponent  - Generator(nhibernate.generator): generating 'workflow::nhibernate::workflow::main FOR true' => [CONFIGURATION:../AppEstadioGen(overwrite=false,append=false,fileEncoding=utf-8), ../AppEstadioGen]
+configuroConf:C:\Users\Ruben\AppData\Local\Temp\OOH4RIA8914124212911138794.cfg
+enc:utf-8
+1532 [main] INFO  and2.pr.ProtectedRegionResolverImpl  - Source scan started ...
+1624 [main] INFO  and2.pr.ProtectedRegionResolverImpl  - Source scan finished in 0.092s
+1624 [main] INFO  and2.pr.ProtectedRegionResolverImpl  - Files scanned: 127
+1624 [main] INFO  and2.pr.ProtectedRegionResolverImpl  - Regions found: 8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+enc:utf-8
+5312 [main] INFO         org.eclipse.xpand2.Generator  - Written 5 files to outlet [default](../AppEstadioGen)
+5312 [main] INFO         org.eclipse.xpand2.Generator  - Skipped writing of 78 files to outlet [default](../AppEstadioGen)
+5313 [main] INFO  e.core.container.CompositeComponent  - es.ua.dlsi.ooh.persistence.nhibernate.generator.workflowComponents.CreateSolution
+5323 [main] INFO  e.core.container.CompositeComponent  - es.ua.dlsi.ooh.persistence.nhibernate.generator.workflowComponents.UpdateSolution
+5339 [main] INFO  e.core.container.CompositeComponent  - es.ua.dlsi.ooh.persistence.nhibernate.generator.workflowComponents.CopyDLLs
+../AppEstadioGen\AppEstadioGenNHibernate\AppLib\Antlr3.Runtime.dll
+../AppEstadioGen\AppEstadioGenNHibernate\AppLib\Castle.DynamicProxy2.dll
+../AppEstadioGen\AppEstadioGenNHibernate\AppLib\Iesi.Collections.dll
+../AppEstadioGen\AppEstadioGenNHibernate\AppLib\LinFu.DynamicProxy.dll
+../AppEstadioGen\AppEstadioGenNHibernate\AppLib\log4net.dll
+../AppEstadioGen\AppEstadioGenNHibernate\AppLib\NHibernate.ByteCode.Castle.dll
+../AppEstadioGen\AppEstadioGenNHibernate\AppLib\NHibernate.ByteCode.LinFu.dll
+../AppEstadioGen\AppEstadioGenNHibernate\AppLib\NHibernate.dll
+../AppEstadioGen\AppEstadioGenNHibernate\AppLib\nunit.core.dll
+../AppEstadioGen\AppEstadioGenNHibernate\AppLib\nunit.framework.dll
+5344 [main] INFO  eclipse.emf.mwe.core.WorkflowEngine  - workflow completed in 4622ms!

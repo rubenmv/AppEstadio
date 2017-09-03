@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" ?>
+		<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2"
+		                   assembly="AppEstadioGenNHibernate"
+		                   namespace="AppEstadioGenNHibernate.EN.AppEstadio">
+			<class name="TallaCalzadoEN" table="[TallaCalzado]">
+						<id name="Talla" column="[talla]"/>
+			
+		  			
+						<bag name="Calzado" table="[calzado_tallaCalzado]" inverse="true" >
+							<key>
+									<column name="[FK_talla_idTallaCalzado]"/>
+							</key>
+      						<many-to-many class="AppEstadioGenNHibernate.EN.AppEstadio.CalzadoEN">
+									<column name="[FK_idArticulo_idCalzado]"/>
+      						</many-to-many>
+    					</bag>
+			
+					
+					
+		
+		  </class>
+		  
+		  <query name="TallaCalzadoENReadAllHQL">from TallaCalzadoEN</query>
+		  <query name="TallaCalzadoENgetTallasCalzadoHQL"><![CDATA[FROM TallaCalzadoEN]]></query>
+		</hibernate-mapping>
+	

@@ -1,0 +1,20 @@
+﻿<Page x:Class="AppEstadioGen_MVP.views.AdminInicio"
+	  xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	  xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	  xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+	  xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+	  mc:Ignorable="d"
+	  d:DesignHeight="464" d:DesignWidth="1000"
+
+	Title="Administrador Inicio">
+
+	<Grid>
+		<Button Name="abonos" Content="Abonos" FontSize="24" Margin="424,178,446,230" Width="130" Click="irSeccion" />
+		<Button Name="tienda"  Content="Tienda" FontSize="24" Margin="680,178,190,231" Width="130" Click="irSeccion" />
+		<Label Content="Añadir o modificar datos de :" FontFamily="Trebuchet MS" FontSize="18" Height="34" HorizontalAlignment="Left" Margin="371,110,0,0" VerticalAlignment="Top" Width="249" />
+		<Label Content="Administrador" FontSize="36" Height="61" HorizontalAlignment="Left" Margin="10,10,0,0" Name="label1" VerticalAlignment="Top" Width="439" />
+		<Button Name="entradas"  Content="Entradas" FontSize="24"  Height="55" Width="130" Margin="161,178,709,231" Click="irSeccion" />
+		<Button Content="Revisar pedidos pendientes" Name="revisarPedidos" FontSize="24" Height="55" Margin="170,296,522,113" Click="irSeccion" />
+		<Button Name="eliminarusu" Content="Eliminar Usuarios" FontSize="24" Margin="554,295,231,113"   Click="irSeccion" />
+	</Grid>
+</Page>

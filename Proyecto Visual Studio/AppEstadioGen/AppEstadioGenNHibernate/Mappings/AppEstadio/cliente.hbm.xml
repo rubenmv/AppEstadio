@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8" ?>
+		<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2"
+		                   assembly="AppEstadioGenNHibernate"
+		                   namespace="AppEstadioGenNHibernate.EN.AppEstadio">
+				
+<joined-subclass name="ClienteEN" extends="AppEstadioGenNHibernate.EN.AppEstadio.UsuarioEN" table="[Cliente]">
+	<key>
+    		<column name="[nifUsuario]"/>
+   	</key>
+
+					<property name="NumCuenta" type="string"> 
+						<column name="[numCuenta]"  not-null="true"/>
+					</property>
+					<property name="FechaNac" type="date"> 
+						<column name="[fechaNac]"  not-null="true"/>
+					</property>
+					<property name="Foto" type="string"> 
+						<column name="[foto]"  not-null="true"/>
+					</property>
+					<property name="Telefono" type="string"> 
+						<column name="[telefono]"  not-null="true"/>
+					</property>
+			
+			
+			
+		  			
+						<bag name="Pedido" >
+							<key>
+								<column name="[FK_nifUsuario_idCliente]"/>
+					      	</key>
+							<one-to-many class="AppEstadioGenNHibernate.EN.AppEstadio.PedidoEN"/>
+					    </bag>
+					
+			
+			
+					
+					
+					
+					
+					
+		
+		  </joined-subclass>	
+		  
+		  <query name="ClienteENReadAllHQL">from ClienteEN</query>
+		</hibernate-mapping>
+	

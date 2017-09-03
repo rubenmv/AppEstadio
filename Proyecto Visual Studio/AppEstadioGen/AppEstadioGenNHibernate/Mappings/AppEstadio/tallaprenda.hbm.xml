@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" ?>
+		<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2"
+		                   assembly="AppEstadioGenNHibernate"
+		                   namespace="AppEstadioGenNHibernate.EN.AppEstadio">
+			<class name="TallaPrendaEN" table="[TallaPrenda]">
+						<id name="Talla" column="[talla]"/>
+			
+			
+		  			
+						<bag name="Prenda" table="[prenda_talla]" inverse="true" >
+							<key>
+									<column name="[FK_talla_idTalla]"/>
+							</key>
+      						<many-to-many class="AppEstadioGenNHibernate.EN.AppEstadio.PrendaEN">
+									<column name="[FK_idArticulo_idPrenda]"/>
+      						</many-to-many>
+    					</bag>
+					
+					
+		
+		  </class>
+		  
+		  <query name="TallaPrendaENReadAllHQL">from TallaPrendaEN</query>
+		  <query name="TallaPrendaENgetTallasPrendaHQL"><![CDATA[FROM TallaPrendaEN]]></query>
+		</hibernate-mapping>
+	

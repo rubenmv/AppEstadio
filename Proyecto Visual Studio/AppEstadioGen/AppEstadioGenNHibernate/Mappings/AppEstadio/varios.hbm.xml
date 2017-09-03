@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" ?>
+		<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2"
+		                   assembly="AppEstadioGenNHibernate"
+		                   namespace="AppEstadioGenNHibernate.EN.AppEstadio">
+				
+<joined-subclass name="VariosEN" extends="AppEstadioGenNHibernate.EN.AppEstadio.ArticuloEN" table="[Varios]">
+	<key>
+    		<column name="[idArticulo]"/>
+   	</key>
+
+					<property name="Modelo" type="integer"> 
+						<column name="[modelo]"  not-null="true"/>
+					</property>
+			
+		  			
+						<bag name="Tamano" table="[varios_tamano]"  >
+							<key>
+									<column name="[FK_idArticulo_idVarios]"/>
+							</key>
+      						<many-to-many class="AppEstadioGenNHibernate.EN.AppEstadio.TamanoEN">
+									<column name="[FK_tam_idTamano]"/>
+      						</many-to-many>
+    					</bag>
+			
+					
+					
+		
+		  </joined-subclass>	
+		  
+		  <query name="VariosENReadAllHQL">from VariosEN</query>
+		  <query name="VariosENgetVariosHQL"><![CDATA[FROM VariosEN]]></query>
+		</hibernate-mapping>
+	

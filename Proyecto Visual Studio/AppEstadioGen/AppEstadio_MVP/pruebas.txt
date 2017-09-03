@@ -1,0 +1,100 @@
+PRUEBA DE LOGIN: El primer resultado debe ser correcto, los otros dos son incorrectos
+1. Usuario o password incorrecto
+2. Usuario o password incorrecto
+3. Usuario o password incorrecto
+
+
+--------------------------------------
+
+
+
+CREANDO ENTRADA... ¡¡EXITO!!
+
+CREANDO ABONO... ¡¡EXITO!!
+
+CREANDO PRODUCTO CAMISETA... ¡¡EXITO!!
+
+CREANDO ARTICULO CAMISETA... ¡¡EXITO!!
+
+--------------------------------------
+
+
+
+CREANDO PRODUCTO TAZA... ¡¡EXITO!!
+
+CREANDO ARTICULO TAZA... ¡¡EXITO!!
+
+--------------------------------------
+
+
+
+CREANDO PRODUCTO BOTAS... ¡¡EXITO!!
+
+CREANDO ARTICULO CALZADO BOTAS... ¡¡EXITO!!
+
+--------------------------------------
+
+
+
+CREANDO PEDIDO PASANDO LINEAPEDIDO...  ¡¡EXITO!!
+
+--------------------------------------
+
+
+
+OBTENIENDO PRODUCTOS POR NOMBRE: 'camiseta'
+
+
+Encontrados 1 productos
+
+Nombre: Camiseta UA Club
+Descripcion: Camiseta UA Club para los aficionados a este gran equipo de futbol
+Precio: 55
+Stock: 50
+
+
+
+--------------------------------------
+
+
+
+OBTENIENDO PRODUCTOS POR DESCRIPCION: 'UMH Top Stars'
+
+
+Encontrados 0 productos
+
+
+
+--------------------------------------
+
+
+
+OBTENIENDO PRODUCTOS POR RANGO DE PRECIO: min = 5, max = 20
+
+
+Encontrados 1 productos
+
+Nombre: Taza UA Club
+Descripcion: Taza del mejor equipo del mundo para tomarte el Cola Cao
+Precio: 10
+Stock: 25
+
+
+
+--------------------------------------
+
+
+
+OBTENIENDO PEDIDOS POR RANGO DE FECHA
+
+
+Encontrados 1 pedidos
+
+Fecha: 08/11/2012 00:00:00
+Estado: pendiente
+Cliente: 12345678A
+
+
+
+--------------------------------------
+

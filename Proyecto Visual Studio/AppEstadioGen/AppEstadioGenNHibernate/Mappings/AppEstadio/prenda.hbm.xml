@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8" ?>
+		<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2"
+		                   assembly="AppEstadioGenNHibernate"
+		                   namespace="AppEstadioGenNHibernate.EN.AppEstadio">
+				
+<joined-subclass name="PrendaEN" extends="AppEstadioGenNHibernate.EN.AppEstadio.ArticuloEN" table="[Prenda]">
+	<key>
+    		<column name="[idArticulo]"/>
+   	</key>
+
+					<property name="Sexo" type="string"> 
+						<column name="[sexo]"  not-null="true"/>
+					</property>
+					<property name="Modelo" type="integer"> 
+						<column name="[modelo]"  not-null="true"/>
+					</property>
+					<property name="Color" type="string"> 
+						<column name="[color]"  not-null="true"/>
+					</property>
+			
+			
+		  			
+						<bag name="Talla" table="[prenda_talla]"  >
+							<key>
+									<column name="[FK_idArticulo_idPrenda]"/>
+							</key>
+      						<many-to-many class="AppEstadioGenNHibernate.EN.AppEstadio.TallaPrendaEN">
+									<column name="[FK_talla_idTalla]"/>
+      						</many-to-many>
+    					</bag>
+			
+			
+					
+					
+					
+					
+		
+		  </joined-subclass>	
+		  
+		  <query name="PrendaENReadAllHQL">from PrendaEN</query>
+		  <query name="PrendaENgetPrendasHQL"><![CDATA[FROM PrendaEN]]></query>
+		</hibernate-mapping>
+	

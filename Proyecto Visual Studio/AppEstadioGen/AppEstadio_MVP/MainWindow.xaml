@@ -1,0 +1,10 @@
+﻿<Window x:Class="AppEstadioGen_MVP.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MainWindow" Height="720" Width="1024">
+    
+    <Grid Background="#FFE5EFE5" Height="734" Width="1030">
+		<Frame Height="190" HorizontalAlignment="Left" Margin="2,2,0,0" Name="frameCabecera" VerticalAlignment="Top" Width="1000" Source="views\Cabecera.xaml" NavigationUIVisibility="Hidden" />
+        <Frame Height="464" HorizontalAlignment="Left" Margin="2,198,0,0" Name="frameContenido" VerticalAlignment="Top" Width="1000" NavigationUIVisibility="Hidden"/>
+    </Grid>
+</Window>

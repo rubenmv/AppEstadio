@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" ?>
+		<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2"
+		                   assembly="AppEstadioGenNHibernate"
+		                   namespace="AppEstadioGenNHibernate.EN.AppEstadio">
+				
+<joined-subclass name="TiendaEN" extends="AppEstadioGenNHibernate.EN.AppEstadio.ProductoEN" table="[Tienda]">
+	<key>
+    		<column name="[idProducto]"/>
+   	</key>
+
+					<property name="Color" type="string"> 
+						<column name="[color]"  not-null="true"/>
+					</property>
+					<property name="Tipo" > 
+						<column name="[tipo]"  not-null="true"/>
+					</property>
+			
+			
+			
+		  			
+						<bag name="Talla" table="[tienda_talla]"  >
+							<key>
+									<column name="[FK_idProducto_idTienda]"/>
+							</key>
+      						<many-to-many class="AppEstadioGenNHibernate.EN.AppEstadio.TallaEN">
+									<column name="[FK_idTalla_idTalla]"/>
+      						</many-to-many>
+    					</bag>
+					
+					
+					
+		
+		  </joined-subclass>	
+		  
+		  <query name="TiendaENReadAllHQL">from TiendaEN</query>
+		</hibernate-mapping>
+	

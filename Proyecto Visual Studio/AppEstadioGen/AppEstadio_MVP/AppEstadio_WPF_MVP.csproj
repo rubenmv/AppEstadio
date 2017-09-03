@@ -1,0 +1,417 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{BECFF20C-48F8-4BC4-AE0C-3D009ED8DF49}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>PetstoreGen_PageController</RootNamespace>
+    <AssemblyName>PetstoreGen_PageController</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|AnyCPU'">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <OutputPath>bin\Debug\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|AnyCPU'">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <OutputPath>bin\Release\</OutputPath>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Antlr3.Runtime, Version=3.1.0.39271, Culture=neutral, PublicKeyToken=3a9cab8f8d22bfb7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\PetstoreGenNHibernate\AppLib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="Castle.DynamicProxy2">
+      <HintPath>..\PetstoreGenNHibernate\AppLib\Castle.DynamicProxy2.dll</HintPath>
+    </Reference>
+    <Reference Include="Iesi.Collections, Version=1.0.1.0, Culture=neutral, PublicKeyToken=aa95f207798dfdb4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\PetstoreGenNHibernate\AppLib\Iesi.Collections.dll</HintPath>
+    </Reference>
+    <Reference Include="LinFu.DynamicProxy">
+      <HintPath>..\PetstoreGenNHibernate\AppLib\LinFu.DynamicProxy.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net, Version=1.2.10.0, Culture=neutral, PublicKeyToken=1b44e1d426115821, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\PetstoreGenNHibernate\AppLib\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="NHibernate, Version=2.1.2.4000, Culture=neutral, PublicKeyToken=aa95f207798dfdb4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\PetstoreGenNHibernate\AppLib\NHibernate.dll</HintPath>
+    </Reference>
+    <Reference Include="NHibernate.ByteCode.Castle">
+      <HintPath>..\PetstoreGenNHibernate\AppLib\NHibernate.ByteCode.Castle.dll</HintPath>
+    </Reference>
+    <Reference Include="NHibernate.ByteCode.LinFu">
+      <HintPath>..\PetstoreGenNHibernate\AppLib\NHibernate.ByteCode.LinFu.dll</HintPath>
+    </Reference>
+    <Reference Include="nunit.core">
+      <HintPath>..\PetstoreGenNHibernate\AppLib\nunit.core.dll</HintPath>
+    </Reference>
+    <Reference Include="nunit.framework">
+      <HintPath>..\PetstoreGenNHibernate\AppLib\nunit.framework.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="Code\IVistaAbonos.cs" />
+    <Compile Include="Code\IVistaAdminNuevoProducto.cs" />
+    <Compile Include="Code\IVistaPedidos.cs" />
+    <Compile Include="Code\IVistaAdminUsuarios.cs" />
+    <Compile Include="Code\IVistaCarroCompra.cs" />
+    <Compile Include="Code\IVistaConfirmacionCompra.cs" />
+    <Compile Include="Code\IVistaDetalleAbono.cs" />
+    <Compile Include="Code\IVistaDetalleEntrada.cs" />
+    <Compile Include="Code\IVistaDetallePedido.cs" />
+    <Compile Include="Code\IVistaDetalleProducto.cs" />
+    <Compile Include="Code\IVistaEntradas.cs" />
+    <Compile Include="Code\IVistaFinCompra.cs" />
+    <Compile Include="Code\IVistaUsuario.cs" />
+    <Compile Include="Code\IVistaCabecera.cs" />
+    <Compile Include="Code\IVistaPlantilla.cs" />
+    <Compile Include="Code\IVistaTienda.cs" />
+    <Compile Include="Code\PresenterAbonos.cs" />
+    <Compile Include="Code\PresenterAdminNuevoProducto.cs" />
+    <Compile Include="Code\PresenterPedido.cs" />
+    <Compile Include="Code\PresenterAdminUsuarios.cs" />
+    <Compile Include="Code\PresenterCarroCompra.cs" />
+    <Compile Include="Code\PresenterConfirmacionCompra.cs" />
+    <Compile Include="Code\PresenterDetalleAbono.cs" />
+    <Compile Include="Code\PresenterDetalleEntrada.cs" />
+    <Compile Include="Code\PresenterDetallePedido.cs" />
+    <Compile Include="Code\PresenterDetalleProducto.cs" />
+    <Compile Include="Code\PresenterEntradas.cs" />
+    <Compile Include="Code\PresenterFinCompra.cs" />
+    <Compile Include="Code\PresenterUsuario.cs" />
+    <Compile Include="Code\PresenterCabecera.cs" />
+    <Compile Include="Code\PresenterPlantilla.cs" />
+    <Compile Include="Code\PresenterTienda.cs" />
+    <Compile Include="Code\SessionManager.cs" />
+    <Compile Include="Code\ShoppingCart.cs" />
+    <Compile Include="Code\ShoppingCartItem.cs" />
+    <Compile Include="views\Abonos.xaml.cs">
+      <DependentUpon>Abonos.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="views\AdminAbonos.xaml.cs">
+      <DependentUpon>AdminAbonos.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="views\AdminEntradas.xaml.cs">
+      <DependentUpon>AdminEntradas.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="views\AdminInicio.xaml.cs">
+      <DependentUpon>AdminInicio.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="views\AdminNuevaEntrada.xaml.cs">
+      <DependentUpon>AdminNuevaEntrada.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="views\AdminNuevoAbono.xaml.cs">
+      <DependentUpon>AdminNuevoAbono.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="views\AdminNuevoProducto.xaml.cs">
+      <DependentUpon>AdminNuevoProducto.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="views\AdminPedidosPendientes.xaml.cs">
+      <DependentUpon>AdminPedidosPendientes.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="views\AdminProductos.xaml.cs">
+      <DependentUpon>AdminProductos.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="views\AdminUsuarios.xaml.cs">
+      <DependentUpon>AdminUsuarios.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="views\Cabecera.xaml.cs">
+      <DependentUpon>Cabecera.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="views\CarroCompra.xaml.cs">
+      <DependentUpon>CarroCompra.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="views\ConfiguracionPerfil.xaml.cs">
+      <DependentUpon>ConfiguracionPerfil.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="views\ConfirmacionCompra.xaml.cs">
+      <DependentUpon>ConfirmacionCompra.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="views\DetalleAbono.xaml.cs">
+      <DependentUpon>DetalleAbono.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="views\DetalleEntrada.xaml.cs">
+      <DependentUpon>DetalleEntrada.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="views\DetallePedido.xaml.cs">
+      <DependentUpon>DetallePedido.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="views\DetalleProducto.xaml.cs">
+      <DependentUpon>DetalleProducto.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="views\DevolucionEntrada.xaml.cs">
+      <DependentUpon>DevolucionEntrada.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="views\Entradas.xaml.cs">
+      <DependentUpon>Entradas.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="views\FinCompra.xaml.cs">
+      <DependentUpon>FinCompra.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="views\Inicio.xaml.cs">
+      <DependentUpon>Inicio.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="views\Login.xaml.cs">
+      <DependentUpon>Login.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="views\MisCompras.xaml.cs">
+      <DependentUpon>MisCompras.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="views\SobreNosotros.xaml.cs">
+      <DependentUpon>SobreNosotros.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="views\Plantilla.xaml.cs">
+      <DependentUpon>Plantilla.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="views\Tienda.xaml.cs">
+      <DependentUpon>Tienda.xaml</DependentUpon>
+    </Compile>
+    <Page Include="MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Page Include="views\Abonos.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="views\AdminAbonos.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="views\AdminEntradas.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="views\AdminInicio.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="views\AdminNuevaEntrada.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="views\AdminNuevoAbono.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="views\AdminNuevoProducto.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="views\AdminPedidosPendientes.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="views\AdminProductos.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="views\AdminUsuarios.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="views\Cabecera.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="views\CarroCompra.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="views\ConfiguracionPerfil.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="views\ConfirmacionCompra.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="views\DetalleAbono.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="views\DetalleEntrada.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="views\DetallePedido.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="views\DetalleProducto.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="views\DevolucionEntrada.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="views\Entradas.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="views\FinCompra.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="views\Inicio.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="views\Login.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="views\MisCompras.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="views\SobreNosotros.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="views\Plantilla.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="views\Tienda.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="app.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\AppEstadioCP\AppEstadioCP.csproj">
+      <Project>{D4CB224B-8B66-402C-90CD-2E8168D2C104}</Project>
+      <Name>AppEstadioCP</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\AppEstadioGenNHibernate\AppEstadioGenNHibernate.csproj">
+      <Project>{66C66636-FD6A-4A3F-A7C5-FE88BBA117AF}</Project>
+      <Name>AppEstadioGenNHibernate</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\AppEstadio_GestorLocal\AppEstadio_GestorLocal.csproj">
+      <Project>{B79F07F6-DF6A-4AA5-A21F-6305EA8831E1}</Project>
+      <Name>AppEstadio_GestorLocal</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\boton_abonos.png" />
+    <Resource Include="images\boton_aceptar.png" />
+    <Resource Include="images\boton_anterior.png" />
+    <Resource Include="images\boton_buscar.png" />
+    <Resource Include="images\boton_cancelar.png" />
+    <Resource Include="images\boton_entradas.png" />
+    <Resource Include="images\boton_inicio.png" />
+    <Resource Include="images\boton_miscompras.png" />
+    <Resource Include="images\boton_perfil.png" />
+    <Resource Include="images\boton_productos.png" />
+    <Resource Include="images\boton_siguiente.png" />
+    <Resource Include="images\boton_tienda.png" />
+    <Resource Include="images\fondo.png" />
+    <Resource Include="images\fondo_cabecera.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\boton_carro.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\boton_salir.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\boton_login.png" />
+    <Resource Include="images\boton_login1.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

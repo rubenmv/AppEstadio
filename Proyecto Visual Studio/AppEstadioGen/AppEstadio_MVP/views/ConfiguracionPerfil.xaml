@@ -1,0 +1,44 @@
+﻿<Page x:Class="AppEstadioGen_MVP.views.ConfiguracionPerfil"
+	  xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	  xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	  xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+	  xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+	  mc:Ignorable="d"
+	  d:DesignHeight="460" d:DesignWidth="1000"
+	Title="ConfiguracionPerfil">
+
+	<Grid>
+        <Label Content="Nombre:" FontFamily="Trebuchet MS" Height="24" HorizontalAlignment="Left" Margin="18,78,0,0" VerticalAlignment="Top" Width="79" />
+        <TextBox Height="20" Margin="160,78,690,0" Name="textBoxNombre" TextWrapping="Wrap" VerticalAlignment="Top" Width="150" Text="{Binding Nombre}" />
+        <Label Content="E-mail:" FontFamily="Trebuchet MS" Height="24" HorizontalAlignment="Left" Margin="18,145,0,0" VerticalAlignment="Top" Width="79" />
+		<TextBox Text="{Binding Email}" Height="20" Margin="160,145,690,0" Name="textBoxEmail" TextWrapping="Wrap" VerticalAlignment="Top" Width="150" />
+		<Label Content="Modificar perfil" FontFamily="Trebuchet MS" Height="45" HorizontalAlignment="Left" Margin="12,0,0,0" VerticalAlignment="Top" Width="241" FontWeight="Bold" FontSize="30" />
+		<Label Content="Nueva Contraseña:" FontFamily="Trebuchet MS" Height="24" HorizontalAlignment="Left" Margin="576,210,0,0" VerticalAlignment="Top" Width="120" />
+        <PasswordBox Height="20" Margin="718,210,132,0" Name="textBoxNewPassword" VerticalAlignment="Top" Width="150" />
+        <Label Content="Repetir Contraseña:" FontFamily="Trebuchet MS" Height="24" HorizontalAlignment="Left" Margin="576,240,0,0" VerticalAlignment="Top" Width="136" />
+		<PasswordBox Height="20" Margin="718,244,132,0" Name="textBoxNewPassword2" VerticalAlignment="Top" Width="150" />
+        <Button Content="Modificar datos" Height="32" HorizontalAlignment="Right" Margin="0,0,690,77" VerticalAlignment="Bottom" Width="102" Click="botonModificarPerfil" />
+        <Label Content="" FontFamily="Trebuchet MS" Height="28" HorizontalAlignment="Right" Margin="0,74,458,0" Name="errorusuario" VerticalAlignment="Top" Width="214" />
+        <Label Content="" FontFamily="Trebuchet MS" Height="28" HorizontalAlignment="Right" Margin="0,279,132,0" Name="label1" VerticalAlignment="Top" Width="292" />
+        <Label Content="" FontFamily="Trebuchet MS" Height="29" HorizontalAlignment="Right" Margin="0,401,421,0" Name="resultadoBaja" VerticalAlignment="Top" Width="251" />
+        <Label Content="" FontFamily="Trebuchet MS" Height="31" HorizontalAlignment="Right" Margin="0,138,458,0" Name="label3" VerticalAlignment="Top" Width="214" />
+        <Label Content="" FontFamily="Trebuchet MS" Height="29" HorizontalAlignment="Right" Margin="0,321,132,0" Name="label4" VerticalAlignment="Top" Width="292" />
+		<Button Content="Darme de baja" Height="32" HorizontalAlignment="Left" Margin="208,0,0,30" VerticalAlignment="Bottom" Width="102" Click="botonDarseDeBaja" />
+        <Label Content="" FontFamily="Trebuchet MS" Height="29" HorizontalAlignment="Right" Margin="0,351,421,0" Name="resultadoModificacion" VerticalAlignment="Top" Width="251" />
+		<Label Content="Apellidos:" FontFamily="Trebuchet MS" Height="24" HorizontalAlignment="Left" Margin="18,108,0,0" VerticalAlignment="Top" Width="79" />
+		<TextBox Text="{Binding Apellidos}" Height="20" Margin="160,108,690,0" Name="textBoxApellidos" TextWrapping="Wrap" VerticalAlignment="Top" Width="150" />
+		<Label Content="Direccion:" FontFamily="Trebuchet MS" Height="24" HorizontalAlignment="Left" Margin="18,176,0,0" VerticalAlignment="Top" Width="79" />
+		<TextBox Text="{Binding Direccion}" Height="20" Margin="160,176,458,0" Name="textBoxDireccion" TextWrapping="Wrap" VerticalAlignment="Top" />
+		<Label Content="(Calle, Numero, Piso, Puerta, Ciudad, Provincia)" FontFamily="Trebuchet MS" FontStyle="Italic"  Height="24" HorizontalAlignment="Left" Margin="18,206,0,0" VerticalAlignment="Top" Width="303" />
+		<Label Content="Telefono:" FontFamily="Trebuchet MS" Height="24" HorizontalAlignment="Left" Margin="18,236,0,0" VerticalAlignment="Top" Width="79" />
+		<TextBox Text="{Binding Telefono}" Height="20" Margin="160,236,690,0" Name="textBoxTelefono" TextWrapping="Wrap" VerticalAlignment="Top" Width="150" />
+		<Label Content="" FontFamily="Trebuchet MS" Height="28" HorizontalAlignment="Right" Margin="0,232,458,0" Name="label6" VerticalAlignment="Top" Width="214" />
+		<DatePicker SelectedDate="{Binding FechaNac}" Height="25" HorizontalAlignment="Left" Margin="27,296,0,0" Name="fechaNac" VerticalAlignment="Top" Width="115" />
+		<Label Content="Fecha de nacimiento:" FontFamily="Trebuchet MS" Height="24" HorizontalAlignment="Left" Margin="18,266,0,0" VerticalAlignment="Top" Width="141" />
+		<Label Content="" FontFamily="Trebuchet MS" Height="28" HorizontalAlignment="Right" Margin="0,293,626,0" Name="label7" VerticalAlignment="Top" Width="214" />
+		<Label Content="Contraseña:" FontFamily="Trebuchet MS" Height="24" HorizontalAlignment="Left" Margin="576,116,0,0" VerticalAlignment="Top" Width="120" />
+		<PasswordBox Height="20" Margin="718,120,132,0" Name="textBoxPassword" VerticalAlignment="Top" Width="150" />
+		<TextBlock Text="Como medidad de seguridad, necesitamos que introduzca&#10;su contraseña para verificar su usuario" Foreground="red" FontFamily="Trebuchet MS" HorizontalAlignment="Left" Margin="576,74,0,348" Width="380" />
+		<TextBlock FontFamily="Trebuchet MS" HorizontalAlignment="Left" Margin="576,162,0,260" Text="Si desea modificar su contraseña, introduzca la nueva&#10;dos veces, en caso contrario, déjelos en blanco" Width="380" />
+	</Grid>
+</Page>

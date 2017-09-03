@@ -1,0 +1,48 @@
+0    [main] INFO  eclipse.emf.mwe.core.WorkflowEngine  - --------------------------------------------------------------------------------------
+2    [main] INFO  eclipse.emf.mwe.core.WorkflowEngine  - EMF Modeling Workflow Engine 1.2.1, Build v201306110341
+2    [main] INFO  eclipse.emf.mwe.core.WorkflowEngine  - (c) 2005-2009 openarchitectureware.org and contributors
+2    [main] INFO  eclipse.emf.mwe.core.WorkflowEngine  - --------------------------------------------------------------------------------------
+2    [main] INFO  eclipse.emf.mwe.core.WorkflowEngine  - running workflow: C:/Users/Javi/workspace/AppEstadio/templates/workflow/generator.mwe
+2    [main] INFO  eclipse.emf.mwe.core.WorkflowEngine  - 
+468  [main] INFO  lipse.emf.mwe.utils.StandaloneSetup  - Registering platform uri 'C:\Users\Javi\workspace'
+897  [main] INFO  lipse.emf.mwe.utils.StandaloneSetup  - Adding generated EPackage 'es.ua.dlsi.ooh.conceptualView.ConceptualViewPackage'
+1055 [main] INFO  lipse.emf.mwe.utils.StandaloneSetup  - Adding generated EPackage 'org.eclipse.gmf.runtime.notation.NotationPackage'
+1070 [main] WARN  and2.pr.ProtectedRegionResolverImpl  - Ignoring non-existing protected region path C:\Users\Javi\workspace\AppEstadio\..\AppEstadioGen
+1071 [main] ERROR ternal.core.ast.util.VisitorCreator  - java.lang.IllegalArgumentException: Ignoring non-existing protected region path C:\Users\Javi\workspace\AppEstadio\..\AppEstadioGen
+java.lang.RuntimeException: java.lang.IllegalArgumentException: Ignoring non-existing protected region path C:\Users\Javi\workspace\AppEstadio\..\AppEstadioGen
+	at org.eclipse.emf.mwe.internal.core.ast.util.InjectorSimple.setValue(InjectorSimple.java:35)
+	at org.eclipse.emf.mwe.internal.core.ast.util.VisitorCreator.visitSimpleParamAST(VisitorCreator.java:201)
+	at org.eclipse.emf.mwe.internal.core.ast.util.VisitorBase.visit(VisitorBase.java:49)
+	at org.eclipse.emf.mwe.internal.core.ast.AbstractASTBase.accept(AbstractASTBase.java:44)
+	at org.eclipse.emf.mwe.internal.core.ast.util.VisitorCreator.createBean(VisitorCreator.java:155)
+	at org.eclipse.emf.mwe.internal.core.ast.util.VisitorCreator.visitComponentAST(VisitorCreator.java:116)
+	at org.eclipse.emf.mwe.internal.core.ast.util.VisitorBase.visit(VisitorBase.java:37)
+	at org.eclipse.emf.mwe.internal.core.ast.AbstractASTBase.accept(AbstractASTBase.java:44)
+	at org.eclipse.emf.mwe.internal.core.ast.util.VisitorCreator.createBean(VisitorCreator.java:155)
+	at org.eclipse.emf.mwe.internal.core.ast.util.VisitorCreator.visitComponentAST(VisitorCreator.java:116)
+	at org.eclipse.emf.mwe.internal.core.ast.util.VisitorBase.visit(VisitorBase.java:37)
+	at org.eclipse.emf.mwe.internal.core.ast.AbstractASTBase.accept(AbstractASTBase.java:44)
+	at org.eclipse.emf.mwe.internal.core.ast.util.VisitorCreator.visitInclusionAST(VisitorCreator.java:88)
+	at org.eclipse.emf.mwe.internal.core.ast.util.VisitorBase.visit(VisitorBase.java:34)
+	at org.eclipse.emf.mwe.internal.core.ast.AbstractASTBase.accept(AbstractASTBase.java:44)
+	at org.eclipse.emf.mwe.internal.core.ast.util.VisitorCreator.createBean(VisitorCreator.java:155)
+	at org.eclipse.emf.mwe.internal.core.ast.util.VisitorCreator.visitComponentAST(VisitorCreator.java:116)
+	at org.eclipse.emf.mwe.internal.core.ast.util.VisitorBase.visit(VisitorBase.java:37)
+	at org.eclipse.emf.mwe.internal.core.ast.AbstractASTBase.accept(AbstractASTBase.java:44)
+	at org.eclipse.emf.mwe.internal.core.ast.util.WorkflowFactory.parseInitAndCreate(WorkflowFactory.java:71)
+	at org.eclipse.emf.mwe.internal.core.ast.util.WorkflowFactory.parseInitAndCreate(WorkflowFactory.java:50)
+	at org.eclipse.emf.mwe.core.WorkflowEngine.prepare(WorkflowEngine.java:92)
+	at org.eclipse.emf.mwe.core.WorkflowEngine.run(WorkflowEngine.java:50)
+	at org.eclipse.emf.mwe.core.WorkflowRunner.doRun(WorkflowRunner.java:174)
+	at org.eclipse.emf.mwe.core.WorkflowRunner.main(WorkflowRunner.java:70)
+Caused by: java.lang.IllegalArgumentException: Ignoring non-existing protected region path C:\Users\Javi\workspace\AppEstadio\..\AppEstadioGen
+	at org.eclipse.internal.xpand2.pr.ProtectedRegionResolverImpl.setSrcPathes(ProtectedRegionResolverImpl.java:475)
+	at org.eclipse.xpand2.Generator.setPrSrcPaths(Generator.java:267)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.emf.mwe.internal.core.ast.util.InjectorSimple.setValue(InjectorSimple.java:33)
+	... 24 more
+1076 [main] ERROR eclipse.emf.mwe.core.WorkflowEngine  - [ERROR]: Error creating instance of type 'org.eclipse.xpand2.Generator' : java.lang.IllegalArgumentException: Ignoring non-existing protected region path C:\Users\Javi\workspace\AppEstadio\..\AppEstadioGen(Element: bean component class='org.eclipse.xpand2.Generator' id='nhibernate.generator' in workflow::nhibernate::generator.mwe:27; Reported by: -UNKNOWN-)
+1076 [main] ERROR eclipse.emf.mwe.core.WorkflowEngine  - Workflow interrupted because of configuration errors.

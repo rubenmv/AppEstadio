@@ -1,0 +1,17 @@
+﻿<Page x:Class="AppEstadioGen_MVP.views.Inicio"
+	  xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	  xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	  xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+	  xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+	  mc:Ignorable="d"
+	  d:DesignHeight="460" d:DesignWidth="1000"
+	Title="Inicio">
+
+	<Grid>
+		<Label Content="Inicio" FontFamily="Trebuchet MS" Height="45" HorizontalAlignment="Left" Margin="12,0,0,0" VerticalAlignment="Top" Width="125" FontWeight="Bold" FontSize="30" />
+        <Button Name="entradas" Content="Entradas" HorizontalAlignment="Left" Margin="425,0,0,313" VerticalAlignment="Bottom" Width="130" Height="43" Click="irSeccion" />
+        <Button Name="abonos" Content="Abonos" HorizontalAlignment="Left" Margin="425,0,0,228" VerticalAlignment="Bottom" Width="130" Height="43" Click="irSeccion" />
+        <Button Name="tienda" Content="Tienda" HorizontalAlignment="Left" Margin="425,0,0,142" VerticalAlignment="Bottom" Width="130" Height="43" Click="irSeccion" />
+        <Button Name="compras" Visibility="Hidden" Content="Mis compras" HorizontalAlignment="Left" Margin="425,0,0,60" VerticalAlignment="Bottom" Width="130" Height="43" Click="irSeccion" />
+    </Grid>
+</Page>

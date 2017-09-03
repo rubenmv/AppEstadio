@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" ?>
+		<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2"
+		                   assembly="AppEstadioGenNHibernate"
+		                   namespace="AppEstadioGenNHibernate.EN.AppEstadio">
+				
+<joined-subclass name="CalzadoEN" extends="AppEstadioGenNHibernate.EN.AppEstadio.ArticuloEN" table="[Calzado]">
+	<key>
+    		<column name="[idArticulo]"/>
+   	</key>
+
+					<property name="Color" type="string"> 
+						<column name="[color]"  not-null="true"/>
+					</property>
+					<property name="Modelo" type="integer"> 
+						<column name="[Modelo]"  not-null="true"/>
+					</property>
+			
+		  			
+						<bag name="TallaCalzado" table="[calzado_tallaCalzado]"  >
+							<key>
+									<column name="[FK_idArticulo_idCalzado]"/>
+							</key>
+      						<many-to-many class="AppEstadioGenNHibernate.EN.AppEstadio.TallaCalzadoEN">
+									<column name="[FK_talla_idTallaCalzado]"/>
+      						</many-to-many>
+    					</bag>
+			
+			
+					
+					
+					
+		
+		  </joined-subclass>	
+		  
+		  <query name="CalzadoENReadAllHQL">from CalzadoEN</query>
+		  <query name="CalzadoENgetCalzadosHQL"><![CDATA[FROM CalzadoEN]]></query>
+		</hibernate-mapping>
+	

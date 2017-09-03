@@ -1,0 +1,43 @@
+﻿<Page x:Class="AppEstadioGen_MVP.views.Login"
+	  xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	  xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	  xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+	  xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+	  mc:Ignorable="d"
+	  d:DesignHeight="460" d:DesignWidth="1000"
+	Title="Login" Name="LoginName">
+
+	<Grid>
+		<Label FontFamily="Trebuchet MS" Content="NIF:" HorizontalAlignment="Left" Margin="161,64,0,0" Width="33" Height="24" VerticalAlignment="Top"/>
+		<Label Content="Contraseña:" FontFamily="Trebuchet MS" Height="24" HorizontalAlignment="Left" Margin="115,109,0,0" VerticalAlignment="Top" Width="79" />
+		<TextBox Name="nif" Margin="204,68,646,0" TextWrapping="Wrap" Height="20" Width="150" VerticalAlignment="Top" d:LayoutOverrides="Height"/>
+		<Label Name="errorLogin" Content="" FontFamily="Trebuchet MS" Height="32" HorizontalAlignment="Right" Margin="0,197,646,0" VerticalAlignment="Top" Width="239" />
+		<PasswordBox Height="20" Margin="204,113,646,0" Name="password" Width="150"  VerticalAlignment="Top" />
+		<Label Content="Login" FontFamily="Trebuchet MS" Height="45" HorizontalAlignment="Left" Margin="12,0,0,0" VerticalAlignment="Top" Width="125" FontWeight="Bold" FontSize="30" />
+		<Button Content="Acceder" HorizontalAlignment="Left" Margin="252,0,0,280" VerticalAlignment="Bottom" Width="102" Click="botonAcceder" Height="32" />
+
+
+		<Label Content="Nombre:" FontFamily="Trebuchet MS" Height="24" HorizontalAlignment="Left" Margin="517,245,0,0" VerticalAlignment="Top" Width="59" />
+		<TextBox Height="20" Width="150" Margin="590,247,260,0" Name="textBoxNombre" TextWrapping="Wrap" VerticalAlignment="Top" />
+		<Label Content="E-mail:" FontFamily="Trebuchet MS" Height="24" HorizontalAlignment="Left" Margin="525,138,0,0" VerticalAlignment="Top" Width="51" />
+		<TextBox Height="20" Width="150" Margin="590,138,260,0" Name="textBoxEmail" TextWrapping="Wrap" VerticalAlignment="Top" TextChanged="textBox3_TextChanged" />
+		<Label Content="¿Todavia no eres miembro?" FontFamily="Trebuchet MS" FontSize="20" FontWeight="Bold" Height="34" Margin="478,28,224,0" VerticalAlignment="Top" />
+		<Label Content="Contraseña:" FontFamily="Trebuchet MS" Height="24" HorizontalAlignment="Left" Margin="497,171,0,0" VerticalAlignment="Top" Width="79" />
+		<PasswordBox Height="20" Width="150" Margin="590,175,260,0" Name="textBoxPassword"  VerticalAlignment="Top" />
+		<Label Content="Repetir Contraseña:" FontFamily="Trebuchet MS" Height="24" HorizontalAlignment="Left" Margin="450,205,0,0" VerticalAlignment="Top" Width="126" />
+		<PasswordBox Height="20" Width="150" Margin="590,209,260,0" Name="textBoxPassword2"  VerticalAlignment="Top" />
+		<Button Content="Registrarse" Height="32" HorizontalAlignment="Left" Margin="638,0,0,71" Click="botonRegistrarse" VerticalAlignment="Bottom" Width="102" />
+		<Label Content="" Name="errorusuario" FontFamily="Trebuchet MS" Height="28" HorizontalAlignment="Right" Margin="0,243,28,0"  VerticalAlignment="Top" Width="214" />
+		<Label Content="" FontFamily="Trebuchet MS" Height="28" HorizontalAlignment="Right" Margin="0,171,28,0" Name="label1" VerticalAlignment="Top" Width="214" />
+		<Label Content="" FontFamily="Trebuchet MS" Height="29" HorizontalAlignment="Right" Margin="0,360,28,0" Name="resultadoRegistro" VerticalAlignment="Top" Width="214" />
+		<Label Content="" FontFamily="Trebuchet MS" Height="31" HorizontalAlignment="Right" Margin="0,131,28,0" Name="label3" VerticalAlignment="Top" Width="214" />
+		<Label Content="" FontFamily="Trebuchet MS" Height="29" HorizontalAlignment="Right" Margin="0,205,28,0" Name="label4" VerticalAlignment="Top" Width="214" />
+		<Label Content="NIF:" FontFamily="Trebuchet MS" Height="24" HorizontalAlignment="Left" Margin="544,104,0,0" VerticalAlignment="Top" Width="32" />
+		<TextBox Height="20" Margin="0,104,260,0" Name="textBoxNif" TextWrapping="Wrap" VerticalAlignment="Top" Width="150" HorizontalAlignment="Right" />
+		<Label Content="" FontFamily="Trebuchet MS" Height="29" HorizontalAlignment="Right" Margin="0,0,28,336" Name="label5" VerticalAlignment="Bottom" Width="214" />
+		<Label Content="Datos obligatorios" FontFamily="Trebuchet MS" FontWeight="Bold" FontSize="14" Height="34" HorizontalAlignment="Left" Margin="450,68,0,358" Width="137" />
+		<Label Content="Fecha de nacimiento:" FontFamily="Trebuchet MS" Height="24" HorizontalAlignment="Left" Margin="442,283,0,0" VerticalAlignment="Top" Width="134" />
+		<Label Content="" FontFamily="Trebuchet MS" Height="28" HorizontalAlignment="Right" Margin="0,313,28,0" Name="label2" VerticalAlignment="Top" Width="382" />
+		<DatePicker Height="25" HorizontalAlignment="Left" Margin="590,282,0,0" Name="fechaNac" VerticalAlignment="Top" Width="115" />
+	</Grid>
+</Page>
